@@ -11,24 +11,10 @@
 
 ?>
 
-	</div><!-- #content -->
+<!-- Footer content -->
+<h1>Footer Content</h1>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'woo-starter' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'woo-starter' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'woo-starter' ), 'woo-starter', '<a href="http://facebook.com/developer.tajul">Mohammad Tajul Islam</a>' );
-			?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
-
-</body>
+	</body>
 </html>

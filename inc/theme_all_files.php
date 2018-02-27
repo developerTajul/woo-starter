@@ -52,6 +52,27 @@ function comet_theme_all_files(){
 }
 
 
+/**
+*
+* adding fonts
+*
+*/
+function get_comet_fonts(){
+	$fonts = array();
+	$fonts[] = 'Montserrat:400,700';
+	$fonts[] = 'Raleway:300,400,500';
+	$fonts[] = 'Halant:300,400';
+
+	$comet_fonts = add_query_arg( array(
+		'family'	=> urlencode(implode('|', $fonts))
+		// 'family'	=> implode('|', $fonts)
+	), 'https://fonts.googleapis.com/css');
+
+
+	return $comet_fonts;
+
+}
+
 
 
 /**
