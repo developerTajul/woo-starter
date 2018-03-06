@@ -9,8 +9,17 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="page-area">
+    <div class="container">
+        <div class="row">
+        	<!-- sidebar area starts here -->
+           <div class="col-sm-3">
+				<?php get_sidebar(); ?>
+            </div>
+			<!-- sidebar area ends here -->
+
+			<!-- search page er maincontent starts here -->
+            <div class="col-sm-9">
 
 		<?php
 		if ( have_posts() ) : ?>
@@ -31,7 +40,7 @@ get_header(); ?>
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', 'search' );
+				get_template_part( 'template-parts/content/post', 'search' );
 
 			endwhile;
 
@@ -39,13 +48,16 @@ get_header(); ?>
 
 		else :
 
-			get_template_part( 'template-parts/content', 'none' );
+			get_template_part( 'template-parts/content/post', 'none' );
 
 		endif; ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+           </div> 
+			<!-- maincontent ends here -->
+
+        </div>
+    </div>
+</div>
 
 <?php
-get_sidebar();
 get_footer();
