@@ -145,6 +145,13 @@ if( file_exists( dirname(__FILE__).'/libs/redux-config.php') ){
 
 
 
+// shortcodes
+if( file_exists( dirname(__FILE__).'/inc/theme_all_shortcodes.php') ){
+
+	require_once( dirname(__FILE__).'/inc/theme_all_shortcodes.php');
+}
+
+
 
 
 
