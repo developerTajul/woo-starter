@@ -32,7 +32,8 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div id="product-<?php the_ID(); ?>" <?php post_class('col-sm-9 hellow_single_page'); ?>> 
+		<div class="col-sm-6 col-md-6">
 
 	<?php
 		/**
@@ -43,8 +44,9 @@ if ( post_password_required() ) {
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
+		</div>
 
-	<div class="summary entry-summary">
+	<div class="summary entry-summary col-md-6 col-sm-6 comet_single_product_gallery">
 		<?php
 			/**
 			 * Hook: Woocommerce_single_product_summary.
@@ -61,7 +63,7 @@ if ( post_password_required() ) {
 			do_action( 'woocommerce_single_product_summary' );
 		?>
 	</div>
-
+	<div class="col-sm-12">
 	<?php
 		/**
 		 * Hook: woocommerce_after_single_product_summary.
@@ -72,6 +74,7 @@ if ( post_password_required() ) {
 		 */
 		do_action( 'woocommerce_after_single_product_summary' );
 	?>
+	</div>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
